@@ -23,10 +23,34 @@ h1 {
 p {
     line-height: 1.5;
     font-size: 16px;
+}
 
 a {
     text-decoration: none;
+    position: relative;
 }
+
+.link__hover-effect:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    bottom: -3px;
+    right: 0;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect--white:after {
+    background-color: #fff;
+}
+
+.link__hover-effect--black:after {
+    background-color: #000;
+}
+
+.link__hover-effect:hover:after {
+   width: 100%;
+   left: 0; 
 }
 
 li {
@@ -48,6 +72,7 @@ li {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 12px;
 }
 
 .text-purple {
@@ -71,6 +96,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 12px;
 }
 
 .nav__link--list {
@@ -205,6 +231,7 @@ padding-top: 8px;
 
 .language__list {
    display: flex; 
+   justify-content: center;
    width: 100%;
    flex-wrap: wrap;
 }
@@ -348,7 +375,7 @@ footer {
     right: 0;
     top: 30px;
     font-weight: 700;
-    opacity: 1;
+    opacity: 0;
     transition: all 300ms ease;
 
 }
@@ -360,5 +387,40 @@ footer {
 
 .footer__anchor:hover .footer__logo--popper {
     transform: translateX(60px);
+    opacity: 1;
 }
 
+/* Small phones, tablets, large smartphones */
+@media (max-width: 768px) {
+    nav {
+   height: 68px;
+}
+}
+
+h1 {
+    font-size: 28px;
+}
+
+.about-me__info--para {
+    font-size: 18px;
+}
+
+.language {
+    width: calc(100% / 3);
+}
+
+.project__description--para {
+    font-size: 14px;
+}
+
+.project__description {
+    left: 30px;
+    padding-right: 30px;
+}
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+    .nav__link:not(:last-child) {
+        display: none;
+    }
+}
