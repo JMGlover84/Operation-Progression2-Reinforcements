@@ -277,7 +277,7 @@ padding-top: 8px;
 }
 .language:hover .language__img {
     filter: brightness(80%)
-    opacity(0.86);
+    opacity: (0.86);
     transform: scale(0.9);
 }
 .language {
@@ -393,9 +393,9 @@ padding-top: 8px;
     margin-right: 16px;
 }
 
-.project__description--title 
-.project__description--sub-title 
-.project__description--para 
+.project__description--title, 
+.project__description--sub-title, 
+.project__description--para, 
 .project__description--link {
     text-align: left;
     color: #fff;
